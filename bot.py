@@ -27,7 +27,7 @@ class Main_Commands():
             print("Music is loaded")
 
 @bot.command()
-async def 냥이():
+async def 냥이야():
     possible_responses = [
         '왜 불렀느냐',
         '왜 그러느냐',
