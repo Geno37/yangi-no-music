@@ -1,9 +1,12 @@
-import random
 import discord
-
-from discord.ext import commands
 from discord.ext.commands import Bot
+from discord.ext import commands
 from discord.voice_client import VoiceClient
+import asyncio
+import time
+import random
+import os
+
 
 startup_extensions = ["Music"]
 BOT_PREFIX = ("") 
@@ -22,12 +25,9 @@ async def on_ready():
         print(i.name)
 	
 class Main_Commands():
-        def __init__(self, bot):
-         self.bot = bot
-        def setup(bot):
-            bot.add_cog(Music(bot))
-            print("Music is loaded")
-
+   def __init__(self, bot):
+       self.bot = bot
+        
 @bot.command()
 async def 냥이야():
     possible_responses = [
