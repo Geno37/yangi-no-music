@@ -16,9 +16,11 @@ bot = commands.Bot("")
 
 @bot.event
 async def on_ready():
-	print('시작!')
-	await bot.change_presence(game=discord.game(name='Gendo37이랑 코드 손보는중 '))
-
+   print('시작!')
+   await bot.change_presence(game=discord.game(name='Gendo37이랑 코드 손보는중 '))
+    for i in bot.servers:
+        print(i.name)
+	
 class Main_Commands():
         def __init__(self, bot):
          self.bot = bot
