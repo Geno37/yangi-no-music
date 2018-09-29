@@ -6,36 +6,9 @@ import asyncio
 import time
 import random
 import os
-from discord import opus
-
-OPUS_LIBS = ['libopus-0.x86.dll', 'libopus-0.x64.dll', 'libopus-0.dll', 'libopus.so.0', 'libopus.0.dylib']
  
-def load_opus_lib(opus_libs=OPUS_LIBS):
-    if opus.is_loaded():
-        return True
- 
-    for opus_lib in opus_libs:
-            try:
-                opus.load_opus(opus_lib)
-                return
-            except OSError:
-                pass
- 
-    raise RuntimeError('Could not load an opus lib. Tried %s' % (', '.join(opus_libs)))
- 
- 
-load_opus_lib()
 BOT_PREFIX = ("") 
-for ext in  ["Music"]:
-    bot.load_extension(ext)
-
-
-TOKEN = "NDM4MzAxMzk5MjUyNzI5ODU2.DcH4lw.RmhcVZfW81uq1LsTEQSz8rd6nH8"
- 
-
 bot = Bot(command_prefix=BOT_PREFIX)
-client = discord.Client()
-
 
 
 
@@ -94,16 +67,5 @@ async def 놀아줘():
     await bot.say(random.choice(possible_responses))
 
   
-
-if __name__ == "__main__":
-        for extension in startup_extensions:
-            try:
-                bot.load_extension(extension)
-            except Exception as e:
-                exc = '{}: {}' .format(type(e).__name__, e)
-                print('failed to load extension {}/n{}'.format(extension, exc))
-
-        
-
 
 bot.run(os.environ(TOKEN))
