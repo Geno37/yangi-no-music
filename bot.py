@@ -1,11 +1,9 @@
-import discord
-from discord.ext.commands import Bot
-from discord.ext import commands
-from discord.voice_client import VoiceClient
-import asyncio
-import time
 import random
-import os
+import discord
+
+from discord.ext import commands
+from discord.ext.commands import Bot
+from discord.voice_client import VoiceClient
 
 
 startup_extensions = ["Music"]
