@@ -1,0 +1,5 @@
+discord
+requests
+youtube-dl==  2018.9.8
+discord.py[voice]
+py-trello
