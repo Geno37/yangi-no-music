@@ -1,14 +1,16 @@
-import discord
-from discord.ext.commands import Bot
-from discord.ext import commands
-from discord.voice_client import VoiceClient
-import asyncio
-import time
 import random
-import os
- 
+import discord
+
+from discord.ext import commands
+from discord.ext.commands import Bot
+from discord.voice_client import VoiceClient
+
+startup_extensions = ["Music"]
 BOT_PREFIX = ("") 
-bot = Bot(command_prefix=BOT_PREFIX)
+TOKEN = "NDc3NDU3OTQyNzQwOTkyMDEx.DpDMgQ.6SXMKeoPGLmAwIumYxR6zXM62cw"
+
+bot = commands.Bot("")
+
 
 
 
@@ -68,4 +70,4 @@ async def 놀아줘():
 
   
 
-bot.run(os.environ(TOKEN))
+bot.run(TOKEN)
